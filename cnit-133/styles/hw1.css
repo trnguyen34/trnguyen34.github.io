@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-page h1 {
+    color: white;
+}
+
+.all-of-homeworks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homework-content p {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.homework-content {
+    display: flex;
+    justify-content: center;
+    width: 295px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.15s,
+                transform 0.3s;
+}
+
+.homework-content:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.2);
+}
+
+
