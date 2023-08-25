@@ -4,6 +4,7 @@
         <title>JavaScript - Homework 2 Part 2</title>
         <meta charset="utf-8">
         <meta name="description" content="Calculate the sum, average, and product of three integers">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script>
             function sum(num1, num2, num3) {
                 return num1 + num2 + num3;
@@ -22,19 +23,26 @@
                 var num2 = parseInt(document.forms['my-form'].elements['second-number'].value);
                 var num3 = parseInt(document.forms['my-form'].elements['third-number'].value);
                 
-                if (!(isNaN(num1) && isNaN(num1) && isNaN(num1))) {
+                if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
                    var s = sum(num1, num2, num3);
                    var a = average(num1, num2, num3);
                    var p = product(num1, num2, num3);
                    var min = Math.min(num1, num2, num3);
                    var max = Math.max(num1, num2, num3);
-                   document.forms["my-form"].elements["result"].value = "Sum: " + s + " Product: " + p + 
-                                                                        " Average: " + a + " Min: " + min +
-                                                                        " Max: " + max;
+                   document.forms["my-form"].elements["result"].value = "Sum: " + s + "\nProduct: " + p + 
+                                                                        "\nAverage: " + a + "\nMin: " + min +
+                                                                        "\nMax: " + max;
                 }else {
                     document.forms["my-form"].elements["result"].value = "Please enter valid numbers.";
                 }
             }
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("#submit").click(function(){
+                    $("#my-form").hide();
+                });
+            });
         </script>
     </head>
     <body>
@@ -43,7 +51,8 @@
         <br>
         <br>
 
-        <form name="my-form">
+
+        <form name="my-form" id="my-form">
             <label for="first-number">First Number </label>
             <input type="text" id="first-number" name="first-number" required><br>
             <label for="second-number">Second Number </label>
@@ -51,7 +60,7 @@
             <label for="third-number">Third Number </label>
             <input type="text" id="third-number" name="third-number" required><br>
             <textarea rows="4" cols="40" name="result"></textarea>
-            <input type="button" onclick="calculate()" value="SUBMIT">
+            <input type="button" onclick="calculate()" id="sumbit" value="SUBMIT">
         </form>
     </body>
 </html>
