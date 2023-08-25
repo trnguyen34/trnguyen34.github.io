@@ -36,6 +36,10 @@
                     document.forms["my-form"].elements["result"].value = "Please enter valid numbers.";
                 }
             }
+
+            function reset_form() {
+               document.getElementById("my-form").reset();
+            }
         </script>
         <script>
             $(document).ready(function(){
@@ -49,8 +53,6 @@
         <a href="hw2.html">< Homework 2 </a>
         <br>
         <br>
-        <br>
-
 
         <form name="my-form" id="my-form">
             <label for="first-number">First Number </label>
@@ -61,6 +63,7 @@
             <input type="text" id="third-number" name="third-number" required><br>
             <textarea rows="4" cols="40" name="result"></textarea>
             <input type="button" onclick="calculate()" id="sumbit" value="SUBMIT">
+            <input type="button" onclick="reset_form()" id="clear" value="CLEAR">
         </form>
     </body>
 </html>
