@@ -1,0 +1,51 @@
+body {
+    background-color: black;
+}
+
+.back-home:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-page {
+    color: white;
+}
+
+.main-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.part {
+    display: flex;
+    justify-content: center;
+    height: 56px;
+    width: 295px;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.15s,
+                transform 0.3s;
+}
+
+.part p {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.part:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.2);
+}
