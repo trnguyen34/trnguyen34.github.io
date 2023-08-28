@@ -20,19 +20,27 @@
             }
 
             function calculate() {
-                var num1 = parseInt(document.forms['my-form'].elements['first-number'].value);
-                var num2 = parseInt(document.forms['my-form'].elements['second-number'].value);
-                var num3 = parseInt(document.forms['my-form'].elements['third-number'].value);
+                var input1 = document.forms['my-form'].elements['first-number'].value;
+                var input2 = document.forms['my-form'].elements['second-number'].value;
+                var input3 = document.forms['my-form'].elements['third-number'].value;
                 
-                if (!isNaN(num1) && !isNaN(num2) && !isNaN(num3)) {
-                   var s = sum(num1, num2, num3);
-                   var a = average(num1, num2, num3);
-                   var p = product(num1, num2, num3);
-                   var min = Math.min(num1, num2, num3);
-                   var max = Math.max(num1, num2, num3);
-                   document.forms["my-form"].elements["result"].value = "Sum: " + s + "\nProduct: " + p + 
+                if (!isNaN(input1) && !isNaN(input2) && !isNaN(input3)) {
+                    if (input1 === "" || input2 === "" || input3 === "") {
+                        document.forms["my-form"].elements["result"].value = "Please enter three numbers.";
+                    } else {
+                        var num1 = input1;
+                        var num2 = input2;
+                        var num3 = input3;
+                        var s = sum(num1, num2, num3);
+                        var a = average(num1, num2, num3);
+                        var p = product(num1, num2, num3);
+                        var min = Math.min(num1, num2, num3);
+                        var max = Math.max(num1, num2, num3);
+                        document.forms["my-form"].elements["result"].value = 
+                                                                        "Sum: " + s + "\nProduct: " + p + 
                                                                         "\nAverage: " + a + "\nLargest: " + max +
                                                                         "\nSmallest: " + min;
+                    }
                 }else {
                     document.forms["my-form"].elements["result"].value = "Please enter valid numbers.";
                 }
