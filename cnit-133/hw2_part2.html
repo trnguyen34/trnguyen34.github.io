@@ -28,9 +28,9 @@
                     if (input1 === "" || input2 === "" || input3 === "") {
                         document.forms["my-form"].elements["result"].value = "Please enter three numbers.";
                     } else {
-                        var num1 = input1;
-                        var num2 = input2;
-                        var num3 = input3;
+                        var num1 = parseInt(input1);
+                        var num2 = parseInt(input2);
+                        var num3 = parseInt(input3);
                         var s = sum(num1, num2, num3);
                         var a = average(num1, num2, num3);
                         var p = product(num1, num2, num3);
