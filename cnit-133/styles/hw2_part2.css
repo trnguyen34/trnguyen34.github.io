@@ -44,7 +44,6 @@ h1, label {
 .input-box {
     width: 269.7px;
     height: 30px;
-    
 }
 
 .result-box {
@@ -72,13 +71,15 @@ h1, label {
     background-color: rgb(57, 57, 57);
 }
 
-.input-button:active, .back-homework2:hover:hover {
+.input-button:active, .back-homework2:hover:active {
     background-color: rgb(119, 118, 118);
 }
 
 .back-homework2 {
     text-align: center;
     text-decoration: none;
+    font-size: 13.3333px;
+    font-family: Arial;
 }
 
 
