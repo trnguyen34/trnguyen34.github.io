@@ -4,6 +4,7 @@
         <title>JavaScript - Homework 2 Part 2</title>
         <meta charset="utf-8">
         <meta name="description" content="Calculate the sum, average, and product of three integers">
+        <link rel="stylesheet" href="styles/hw2_part2.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script>
             function sum(num1, num2, num3) {
@@ -30,8 +31,8 @@
                    var min = Math.min(num1, num2, num3);
                    var max = Math.max(num1, num2, num3);
                    document.forms["my-form"].elements["result"].value = "Sum: " + s + "\nProduct: " + p + 
-                                                                        "\nAverage: " + a + "\nMin: " + min +
-                                                                        "\nMax: " + max;
+                                                                        "\nAverage: " + a + "\nLargest: " + max +
+                                                                        "\nSmallest: " + min;
                 }else {
                     document.forms["my-form"].elements["result"].value = "Please enter valid numbers.";
                 }
@@ -41,13 +42,15 @@
                document.getElementById("my-form").reset();
             }
 
-            function fadeResult() {
-                $("#result").fadeTo("fast", 0.15);
-            }
+            $(document).ready(function(){
+                $("#fadeaway").click(function(){
+                    $("#result").fadeTo("slow", 0.15);
+                });
+            });
 
             $(document).ready(function(){
-                $("#clear").click(function(){
-                    $("#result").fadeTo("slow", 0.15);
+                $("#fadeaway").click(function(){
+                    $("#result-label").fadeTo("slow", 0.15);
                 });
             });
 
@@ -57,26 +60,47 @@
                 });
             });
 
-            $(document).ready(function() {
-                setTimeout(fadeResult, 0);
+            $(document).ready(function(){
+                $("#sumbit").click(function(){
+                    $("#result-label").fadeTo("slow", 1);
+                });
             });
         </script>
     </head>
     <body>
-        <a href="hw2.html">Homework 2</a>
-        <br>
-        <br>
 
-        <form name="my-form" id="my-form">
-            <label for="first-number">First Number </label>
-            <input type="text" id="first-number" name="first-number" required><br>
-            <label for="second-number">Second Number </label>
-            <input type="text" id="second-number" name="second-number" required><br>
-            <label for="third-number">Third Number </label>
-            <input type="text" id="third-number" name="third-number" required><br>
-            <textarea rows="4" cols="40" id="result" name="result"></textarea>
-            <input type="button" onclick="calculate()" id="sumbit" value="SUBMIT">
-            <input type="button" onclick="clearForm()" id="clear" value="CLEAR">
-        </form>
+        <div class="content">
+            <div class="box-content">
+                <main>
+                    <div class="calculate-title">
+                        <h1>CALCULATE</h1>
+                    </div>
+                    <form class="my-form" name="my-form" id="my-form">
+                        <div>
+                            <label for="first-number">First Number:</label><br>
+                            <input class="input-box" type="text" id="first-number" name="first-number" placeholder="Enter a number" required>
+                        </div>
+                        <div>
+                            <label for="second-number">Second Number:</label><br>
+                            <input class="input-box" type="text" id="second-number" name="second-number" placeholder="Enter a number" required>
+                        </div>
+                        <div>
+                            <label for="third-number">Third Number:</label><br>
+                            <input class="input-box" type="text" id="third-number" name="third-number" placeholder="Enter a number" required>
+                        </div>
+                        <div>
+                            <label for="result" id="result-label">Result:</label><br>
+                            <textarea class="result-box" id="result" name="result" placeholder=Result></textarea><br>
+                        </div>
+                        <div class="buttons-div">
+                            <input class="input-button" type="button" onclick="calculate()" id="sumbit" value="CALCULATE">
+                            <input class="input-button" type="button" onclick="clearForm()" id="clear" value="CLEAR">
+                            <input class="input-button" type="button" id="fadeaway" value="FADE RESULT">
+                            <a class="back-homework2" type="button" href="hw2.html">BACK HOMEWORK 2</a>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </div>
     </body>
 </html>
