@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Student Grades</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Calculate a student final grade">
+        <link rel="stylesheet" href="styles/hw2_part2.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="js/final-grade.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="box-content">
+                <main>
+                    <div class="calculate-title">
+                        <h1>Student Grades</h1>
+                    </div>
+                    <form class="my-form" name="my-form" id="my-form">
+                        <div>
+                            <label for="homeworkAverage">Homework Average Score:</label><br>
+                            <input class="input-box" type="text" id="homeworkAverage" name="homeworkAverage" placeholder="Enter Homework Average Score" required>
+                        </div>
+                        <div>
+                            <label for="midTerm">Mid Term Exam Score:</label><br>
+                            <input class="input-box" type="text" id="midTerm" name="midTerm" placeholder="Enter Midterm Score" required>
+                        </div>
+                        <div>
+                            <label for="finalExam">Final Exam Score:</label><br>
+                            <input class="input-box" type="text" id="finalExam" name="finalExam" placeholder="Enter Final Exam Score" required>
+                        </div>
+                        <div>
+                            <label for="participation">Particaipation Score:</label><br>
+                            <input class="input-box" type="text" id="participation" name="participation" placeholder="Enter Participation Score" required>
+                        </div>
+                        <div>
+                            <label for="result" id="result-label">Result:</label><br>
+                            <textarea readonly class="result-box" id="result" name="result" placeholder=Result></textarea><br>
+                        </div>
+                        <div class="buttons-div">
+                            <input class="input-button" type="button" onclick="calculate()" id="sumbit" value="CALCULATE">
+                            <input class="input-button" type="button" onclick="clearForm()" id="clear" value="CLEAR">
+                            <input class="input-button" type="button" id="fadeaway" value="FADE RESULT">
+                            <a class="back-homework2" href="hw3.html">BACK HOMEWORK 3</a>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
