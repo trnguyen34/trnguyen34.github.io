@@ -31,18 +31,18 @@ function calculate(qtyItemOne, qtyItemTwo, qtyItemThree, qtyItemFour) {
     itemThreeTotal = itemTotal(itemThreePrice, qtyItemThree);
     itemFourTotal = itemTotal(itemFourPrice, qtyItemFour);
 
-    document.forms["result-form"].elements["result-dollars-item-one"].value = itemOneTotal;
-    document.forms["result-form"].elements["result-dollars-item-two"].value = itemTwoTotal;
-    document.forms["result-form"].elements["result-dollars-item-three"].value = itemThreeTotal;
-    document.forms["result-form"].elements["result-dollars-item-four"].value = itemFourTotal;
+    document.forms["result-form"].elements["result-dollars-item-one"].value = itemOneTotal.toFixed(2);
+    document.forms["result-form"].elements["result-dollars-item-two"].value = itemTwoTotal.toFixed(2);
+    document.forms["result-form"].elements["result-dollars-item-three"].value = itemThreeTotal.toFixed(2);
+    document.forms["result-form"].elements["result-dollars-item-four"].value = itemFourTotal.toFixed(2);
 
     totalAmount = totalAmountSold(itemOneTotal, itemTwoTotal, itemThreeTotal, itemFourTotal);
 
-    document.forms["result-form"].elements["total-dollars-sold"].value = totalAmount;
+    document.forms["result-form"].elements["total-dollars-sold"].value = totalAmount.toFixed(2);
 
     totalEarned = totalEarning(totalAmount);
 
-    document.forms["result-form"].elements["total-dollars-earn"].value = totalEarned;
+    document.forms["result-form"].elements["total-dollars-earn"].value = totalEarned.toFixed(2);
 }
 
 function run() {
