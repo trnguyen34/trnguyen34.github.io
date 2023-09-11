@@ -17,105 +17,107 @@
                         <h1>Homework 3 - Part 2</h1>
                     </div>
                     <div>
-                        <form class="seller-form" name="seller-form" id="seller-name-form">
+                        <form class="seller-form" name="seller-form" id="seller-form">
                             <div>
-                                <label for="seller-name">Seller's Name:</label>
-                                <input class="seller-name" type="text" id="seller-name" name="seller-name" placeholder="Enter the seller's name" required>
+                                <label for="sellerName">Seller's Name:</label>
+                                <input class="seller-name" type="text" id="sellerName" name="sellerName" placeholder="Enter the seller's name" required>
                             </div>
                             <div>
                                 <p>For each item type the quantity sold by the seller</p>
                             </div>
                             <div>
                                 <label for="qty-item-one">Item 1:</label>
-                                <input class="item-qty" type="text" id="qty-item-one" name="qty-item-one" placeholder="Enter the quantity" required>
+                                <input class="item-qty" type="text" id="qty-item-one" name="qtyItemOne" placeholder="Enter the quantity" required>
                             </div>
                             <br>
                             <div>
-                                <label for="qty-item-two">Item 2:</label>
-                                <input class="item-qty" type="text" id="qty-item-two" name="qty-item-two" placeholder="Enter the quantity" required>
+                                <label for="qtyItemTwo">Item 2:</label>
+                                <input class="item-qty" type="text" id="qty-item-two" name="qtyItemTwo" placeholder="Enter the quantity" required>
                             </div>
                             <br>
                             <div>
-                                <label for="qty-item-three">Item 3:</label>
-                                <input class="item-qty" type="text" id="qty-item-three" name="qty-item-three" placeholder="Enter the quantity" required>
+                                <label for="qtyItemThree">Item 3:</label>
+                                <input class="item-qty" type="text" id="qty-item-three" name="qtyItemThree" placeholder="Enter the quantity" required>
                             </div>
                             <br>
                             <div>
-                                <label for="qty-item-four">Item 4:</label>
-                                <input class="item-qty" type="text" id="qty-item-four" name="qty-item-four" placeholder="Enter the quantity" required>
+                                <label for="qtyItemFour">Item 4:</label>
+                                <input class="item-qty" type="text" id="qty-item-four" name="qtyItemFour" placeholder="Enter the quantity" required>
                             </div>
                             <br>
                             <div class="buttons-div">
-                                <input class="input-button" type="button" onclick="calculate()" id="sumbit" value="CALCULATE">
+                                <input class="input-button" type="button" onclick="main()" id="sumbit" value="CALCULATE">
                                 <input class="input-button" type="button" onclick="clearForm()" id="clear" value="CLEAR">
                             </div>
                         </form>
                     </div>
                     <div>
-                        <table>
-                            <tr>
-                                <th>Item #</th>
-                                <th>Price</th>
-                                <th>Qty Sold</th>
-                                <th>Total $</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>$20.99</td>
-                                <td>
-                                    <input class="item-qty" type="text" id="result-qty-item-one" name="result-qty-item-one" placeholder="Number quantity Sold" readonly>
-                                </td>
-                                <td>
-                                    <input class="item-qty" type="text" id="result-dollars-item-one" name="result-dollars-item-one" placeholder="Total dollars sold for item 1" readonly>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>$12.75</td>
-                                <td>
-                                        <input class="item-qty" type="text" id="result-qty-item-two" name="result-qty-item-two" placeholder="Number quantity Sold" readonly>
-                                </td>
-                                <td>
-                                    <input class="item-qty" type="text" id="result-dollars-item-two" name="result-dollars-item-two" placeholder="Total dollars sold for item 2" readonly>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>$9.95</td>
-                                <td>
-                                    <input class="item-qty" type="text" id="result-qty-item-three" name="result-qty-item-three" placeholder="Number quantity Sold" readonly>
-                                </td>
-                                <td>
-                                  <input class="item-qty" type="text" id="result-dollars-item-three" name="result-dollars-item-three" placeholder="Total dollars sold for item 3" readonly>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>$35.89</td>
-                                <td>
-                                    <input class="item-qty" type="text" id="result-qty-item-four" name="result-qty-item-four" placeholder="Number quantity Sold" readonly>
-                                </td>
-                                <td>
-                                    <input class="item-qty" type="text" id="result-dollars-item-four" name="result-dollars-item-four" placeholder="Total dollars sold for item 4" readonly>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Total Amount Sold</td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <input class="item-qty" type="text" id="total-dollars-sold" name="total-dollars-sold" placeholder="Total dollars sold" readonly>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Total Weekly Earnings</td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <input class="item-qty" type="text" id="total-dollars-sold" name="total-dollars-sold" placeholder="Total dollars sold" readonly>
-                                </td>
-                            </tr>
-                        </table>
+                        <form name="result-form">
+                            <table>
+                                <tr>
+                                    <th>Item #</th>
+                                    <th>Price</th>
+                                    <th>Qty Sold</th>
+                                    <th>Total $</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>$20.99</td>
+                                    <td>
+                                        <input class="item-qty" type="text" id="result-qty-item-one" name="result-qty-item-one" placeholder="Number quantity Sold" readonly>
+                                    </td>
+                                    <td>
+                                        <input class="item-qty" type="text" id="result-dollars-item-one" name="result-dollars-item-one" placeholder="Total dollars sold for item 1" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>$12.75</td>
+                                    <td>
+                                            <input class="item-qty" type="text" id="result-qty-item-two" name="result-qty-item-two" placeholder="Number quantity Sold" readonly>
+                                    </td>
+                                    <td>
+                                        <input class="item-qty" type="text" id="result-dollars-item-two" name="result-dollars-item-two" placeholder="Total dollars sold for item 2" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>$9.95</td>
+                                    <td>
+                                        <input class="item-qty" type="text" id="result-qty-item-three" name="result-qty-item-three" placeholder="Number quantity Sold" readonly>
+                                    </td>
+                                    <td>
+                                      <input class="item-qty" type="text" id="result-dollars-item-three" name="result-dollars-item-three" placeholder="Total dollars sold for item 3" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>$35.89</td>
+                                    <td>
+                                        <input class="item-qty" type="text" id="result-qty-item-four" name="result-qty-item-four" placeholder="Number quantity Sold" readonly>
+                                    </td>
+                                    <td>
+                                        <input class="item-qty" type="text" id="result-dollars-item-four" name="result-dollars-item-four" placeholder="Total dollars sold for item 4" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Total Amount Sold</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <input class="item-qty" type="text" id="total-dollars-sold" name="total-dollars-sold" placeholder="Total dollars sold" readonly>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Total Weekly Earnings</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>
+                                        <input class="item-qty" type="text" id="total-dollars-sold" name="total-dollars-sold" placeholder="Total dollars sold" readonly>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
                     </div>
                 </main>
             </div>
