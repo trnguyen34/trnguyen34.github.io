@@ -91,6 +91,12 @@ var validator = $(document).ready(function() {
     });
 });
 
+$(function () {
+    $("#sellerName").tooltip({
+        content: "<p>Please make sure that the salesperson's name is spelled correctly</p>"
+    });
+});
+
 function clearForm() {
     document.getElementById("seller-form").reset();
     $("#seller-form").validate().resetForm(); 

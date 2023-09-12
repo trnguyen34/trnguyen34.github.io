@@ -5,8 +5,10 @@
         <meta charset="utf-8">
         <meta name="description" content="Calculate an employee weekly commission and salary earned">
         <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
         <script src="js/employee-earning.js"></script>
     </head>
     <body>
@@ -20,7 +22,7 @@
                         <form class="seller-form" name="seller-form" id="seller-form">
                             <div>
                                 <label for="sellerName">Seller's Name:</label>
-                                <input class="seller-name" type="text" id="sellerName" name="sellerName" placeholder="Enter the seller's name" required>
+                                <input class="seller-name" type="text" id="sellerName" name="sellerName"  title = "tooltip" placeholder="Enter the seller's name" required>
                             </div>
                             <div>
                                 <p>For each item type the quantity sold by the seller</p>
