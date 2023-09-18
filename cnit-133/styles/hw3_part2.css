@@ -49,6 +49,11 @@ h1, label {
     height: 87px;
 }
 
+.result-title {
+    margin-top: 0.2rem;
+    margin-bottom: 0.5em;
+}
+
 .buttons-div {
     display: flex;
     flex-direction: column;
