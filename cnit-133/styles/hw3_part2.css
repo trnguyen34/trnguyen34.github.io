@@ -26,6 +26,14 @@ body {
     justify-content: center;
 }
 
+.gap {
+    margin-bottom: 0.5rem;
+}
+
+.text-instruction {
+    margin-bottom: 0.5rem;
+}
+
 h1, label {
     color: rgb(80, 94, 108);
     font-weight: 600;
@@ -74,11 +82,11 @@ h1, label {
     font-family: Arial;
 }
 
+#sellerName-error,
 #qty-item-one-error,
 #qty-item-two-error,
 #qty-item-three-error,
 #qty-item-four-error {
-    display: block;
     color: red;
 }
 
