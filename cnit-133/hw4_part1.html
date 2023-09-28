@@ -5,10 +5,35 @@
         <meta charset="utf-8">
         <meta name="description" content="Calculate the sum and product by using the for loop and while loop statements.">
         <link rel="stylesheet" href="">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+        <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="js/hw4-sum-product.js"></script>
     </head>
     <body>
         <a class="back-homework-4" href="hw4.html">BACK HOMEWORK 4</a>
+        <div id="draggable">
+            <p id="loop-product"></p>
+            <p id="loop-sum"></p>
+        </div>
+        <div id="draggable2">
+            <p id="while-product"></p>
+            <p id="while-sum"></p>
+        </div>
     </body>
+    <script>
+        window.onload=function() {
+            forLoop();
+            forWhileLoop();
+        }
+
+        $(function() {
+                $( "#draggable" ).draggable({
+                    scroll: false
+                });
+                $( "#draggable2" ).draggable({
+                    scroll: false
+                });
+            });
+    </script>
 </html>
