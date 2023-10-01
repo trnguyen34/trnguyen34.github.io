@@ -1,0 +1,54 @@
+html, body {
+    background-color: black;
+    height: 100%;
+    margin: 0;
+}
+
+.back-home:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-page {
+    color: white;
+}
+
+.main-contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.part {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
+    cursor: pointer;
+    padding-left: 1%;
+    padding-right: 1%;
+    transition: background-color 0.15s,
+                transform 0.3s;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+p {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.part:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.2);
+}
