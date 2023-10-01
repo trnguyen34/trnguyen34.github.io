@@ -9,16 +9,30 @@
         <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
         <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
         <script src="js/hw4-sum-product.js"></script>
+        <link rel="stylesheet" href="styles/hw4-part1.css">
     </head>
     <body>
-        <a class="back-homework-4" href="hw4.html">BACK HOMEWORK 4</a>
-        <div id="draggable">
-            <p id="loop-product"></p>
-            <p id="loop-sum"></p>
-        </div>
-        <div id="draggable2">
-            <p id="while-product"></p>
-            <p id="while-sum"></p>
+        <div class="container">
+            <header class="title-page" id="draggable-title">
+                <h1>Sum & Product</h1>
+            </header>
+            <div class="part" id="draggable1">
+                <p id="loop-product"></p>
+            </div>
+            <div class="part" id="draggable2">
+                <p id="loop-sum"></p>
+            </div>
+            <div class="part" id="draggable3">
+                <p id="while-product"></p>
+            </div>
+            <div class="part" id="draggable4">
+                <p id="while-sum"></p>
+            </div>
+            <div class="part" id="draggable5">
+                <a href="hw4.html">
+                    <p>BACK HOMEWORK 4 HOMEPAGE</p>
+                </a>
+            </div>
         </div>
     </body>
     <script>
@@ -28,13 +42,35 @@
         }
 
         $(function() {
-                $( "#draggable" ).draggable({
-                    scroll: false
-                });
-                
-                $( "#draggable2" ).draggable({
-                    scroll: false
-                });
+            $( "#draggable-title" ).draggable({
+                scroll: false,
+                containment: 'body'
             });
+
+            $( "#draggable1" ).draggable({
+                scroll: false,
+                containment: 'body'
+            });
+                
+            $( "#draggable2" ).draggable({
+                scroll: false,
+                containment: 'body'
+            });
+
+            $( "#draggable3" ).draggable({
+                scroll: false,
+                containment: 'body'
+            });
+
+            $( "#draggable4" ).draggable({
+                scroll: false,
+                containment: 'body'
+            });
+
+            $( "#draggable5" ).draggable({
+                scroll: false,
+                containment: 'body'
+            });
+        });
     </script>
 </html>
