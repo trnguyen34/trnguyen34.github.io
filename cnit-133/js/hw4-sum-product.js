@@ -32,3 +32,40 @@ function forWhileLoop() {
     document.getElementById("while-product").innerHTML = "The result of 3 * 6 * 9 * 12 * 15 * 18 is " + product;
     document.getElementById("while-sum").innerHTML = "The result of 3 + 6 + 9 + 12 + 15 + 18 is " + sum;
 }
+
+window.onload=function() {
+    forLoop();
+    forWhileLoop();
+}
+
+$(function() {
+    $( "#draggable-title" ).draggable({
+        scroll: false,
+        containment: 'body'
+    });
+
+    $( "#draggable1" ).draggable({
+        scroll: false,
+        containment: 'body'
+    });
+        
+    $( "#draggable2" ).draggable({
+        scroll: false,
+        containment: 'body'
+    });
+
+    $( "#draggable3" ).draggable({
+        scroll: false,
+        containment: 'body'
+    });
+
+    $( "#draggable4" ).draggable({
+        scroll: false,
+        containment: 'body'
+    });
+
+    $( "#draggable5" ).draggable({
+        scroll: false,
+        containment: 'body'
+    });
+});
