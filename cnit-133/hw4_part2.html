@@ -3,23 +3,32 @@
     <head>
         <title>Sum and Product</title>
         <meta charset="utf-8">
-        <meta name="description" content="Calculate the compund interest of $1000 over the years.">
-        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
-        <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <meta name="description" content="Calculate the compound interest of $1000 over the years.">
+        <script src="js/hw4-compound-interest.js"></script>
+        <link rel="stylesheet" href="styles/hw4_part2.css">
     </head>
     <body>
         <h1>Learn about compound interest</h1>
         <script language="javascript" type="text/javascript">
-            for (var a=0; a < 3; a++) {
+            var interestRate = [0.05, 0.06, 0.07];
+            var NumberOfTables = interestRate.length;
+            var NumberOfYears = 5;
+
+            for (var table = 0; table < NumberOfTables; table++) {
                 document.write("<table>");
-                for (var b = 0; b < 3; b++) {
                     document.write("<tr>");
-                        for (var c = 0; c < 3; c++) {
-                            document.write("<th>Company</th>");
-                        }
+                        document.write("<th>Year</th>");
+                        document.write("<th>Amount on deposit</th>");
+                        document.write("<th>Interest Rate</th>");
                     document.write("</tr>");
-                }
+                    
+                    for (var years = 1; years <= NumberOfYears; years++) {
+                        document.write("<tr>");
+                            document.write("<td>" + years + "</td>");
+                            document.write("<td>" + compundInterest(1000, interestRate[table], years) + "</td>");
+                            document.write("<td>" + interestRate[table] + "</td>");
+                        document.write("</tr>");
+                    }
                 document.write("</table>");
             }
         </script>
