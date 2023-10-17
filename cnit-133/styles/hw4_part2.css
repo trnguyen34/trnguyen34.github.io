@@ -41,6 +41,7 @@ table {
 
 .part {
     border-radius: 0.5rem;
+    background-color: rgba(22, 21, 21, 0.1);
     cursor: pointer;
     transition: background-color 0.15s,
                 transform 0.3s;
