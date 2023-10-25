@@ -1,7 +1,6 @@
 function run() {
-    var userName = document.forms["survey-form"].elements["fullname"].value;
     document.getElementById('result').value = getCheckedBoxData() + " \n" 
-        + getRadioButtonData() + " \n" + getDropDownData() + " \n" + userName;
+        + getRadioButtonData() + " \n" + getDropDownData() + " \n" + getUserFullName();
 }
 
 function getCheckedBoxData() {
@@ -36,6 +35,10 @@ function getRadioButtonData() {
 function getDropDownData() {
     var select = document.getElementById("movie-types");
     return select.value;
+}
+
+function getUserFullName() {
+    return document.forms["survey-form"].elements["fullname"].value;
 }
 
 
