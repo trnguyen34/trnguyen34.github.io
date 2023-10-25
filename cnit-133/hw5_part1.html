@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Survey</title>
+        <meta charset="utf-8">
+        <meta name="description" content="A user survey">
+    </head>
+    <body>
+        <div>
+            <h2>Survey</h2>
+        </div>
+        <div>
+            <form class="survey-form" name="survey" id="survey-form">
+                <div>
+                    <label for="fullname">Name:</label>
+                    <input class="input-box" type="text" id="fullname" name="fullname" placeholder="Enter Name" required>
+                </div>
+                <br>
+                <div>
+                    <input type="radio" id="age1" name="age" value="20">
+                    <label for="age1">< 21</label><br>
+                    <input type="radio" id="age2" name="age" value="50">
+                    <label for="age2">21 - 50</label><br>
+                    <input type="radio" id="age3" name="age" value="51">
+                    <label for="age3">> 51</label><br>
+                </div>
+                <br>
+                <div>
+                    <input type="checkbox" id="browser1" name="browsers" value="Firefox">
+                    <label for="browser1">Firefox</label>
+                    <input type="checkbox" id="browser2" name="browsers" value="Edge">
+                    <label for="browser2">Edge</label>
+                    <input type="checkbox" id="browser3" name="browsers" value="Chrome">
+                    <label for="browser3">Chrome</label>
+                    <input type="checkbox" id="browser4" name="browsers" value="Safari">
+                    <label for="browser4">Safari</label>
+                </div>
+                <br>
+                <div>
+                    <label for="movieTypes">Select which type of movie you prefer:</label>
+                    <select id="movieTypes" required>
+                        <option> -- select an option -- </option>
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Documentary">Documentary</option>
+                        <option value="Science Fiction">Science Fiction</option>
+                    </select>
+                </div>
+                <div>
+                    
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
