@@ -1,23 +1,38 @@
 function run() {
-    var checkedBoxData = getCheckedBoxData();
-    var output = document.getElementById("output");
-
-    document.getElementById('result').value = checkedBoxData
+    document.getElementById('result').value = getCheckedBoxData() + " \n" 
+        + getRadioButtonData();
 }
 
 function getCheckedBoxData() {
     var values = [];
-    var select = document.getElementById("survey-form");
-    var option = select.getElementsByTagName("input");
+    var select = document.getElementById("check-box");
+    var input = select.getElementsByTagName("input");
 
-    for (var i = 0; i < option.length; i++) {
-        if(option[i].type === "checkbox" && option[i].checked) {
-            values.push(option[i].value);
+    for (var i = 0; i < input.length; i++) {
+        if(input[i].type === "checkbox" && input[i].checked) {
+            values.push(input[i].value);
         }
     }
 
     return values;
 }
+
+function getRadioButtonData() {
+    var value;
+    var select = document.getElementById("radio-button");
+    var input = select.getElementsByTagName("input");
+
+    for (var i = 0; i < input.length; i++) {
+        if (input[i].type === "radio" && input[i].checked) {
+            value = input[i].value;
+            break;
+        }
+    }
+
+    return value;
+}
+
+
 
 
 
