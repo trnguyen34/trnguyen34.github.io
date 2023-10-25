@@ -1,6 +1,6 @@
 function run() {
     document.getElementById('result').value = getCheckedBoxData() + " \n" 
-        + getRadioButtonData();
+        + getRadioButtonData() + " \n" + getDropDownData();
 }
 
 function getCheckedBoxData() {
@@ -32,7 +32,10 @@ function getRadioButtonData() {
     return value;
 }
 
-
+function getDropDownData() {
+    var select = document.getElementById("movie-types");
+    return select.value;
+}
 
 
 
