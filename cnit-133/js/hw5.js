@@ -1,6 +1,7 @@
 function run() {
+    var userName = document.forms["survey-form"].elements["fullname"].value;
     document.getElementById('result').value = getCheckedBoxData() + " \n" 
-        + getRadioButtonData() + " \n" + getDropDownData();
+        + getRadioButtonData() + " \n" + getDropDownData() + " \n" + userName;
 }
 
 function getCheckedBoxData() {
