@@ -75,7 +75,7 @@ function getUserFullName() {
         return fullName;
     }
 
-    return errorArray.push("Please enter your full name.");
+    return errorArray.push("Please enter your full validate name.");
 }
 
 function validateName(fullName) {
@@ -87,4 +87,12 @@ function validateName(fullName) {
     return true;
 }
 
+function listenOnChnage() {
+    var destination = document.getElementById("destination-onchange").value;
+    window.open(destination);
+}
 
+function listenOnclick() {
+    var destination = document.getElementById("destination-onclick").value;
+    window.open(destination);
+}
