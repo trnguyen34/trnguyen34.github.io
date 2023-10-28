@@ -4,28 +4,30 @@
         <title>Survey</title>
         <meta charset="utf-8">
         <meta name="description" content="A user survey">
+        <script src="js/hw5.js"></script>
     </head>
     <body>
+        <a class="back-homework2" href="hw5.html">BACK HOMEWORK 5</a>
         <div>
             <h2>Survey</h2>
         </div>
         <div>
             <form class="survey-form" name="survey" id="survey-form">
-                <div>
-                    <label for="fullname">Name:</label>
-                    <input class="input-box" type="text" id="fullname" name="fullname" placeholder="Enter Name" required>
+                <div id="user-name">
+                    <label for="fullname">Full Name:</label>
+                    <input class="input-box" type="text" id="fullname" name="fullname" placeholder="Enter Name">
                 </div>
                 <br>
-                <div>
-                    <input type="radio" id="age1" name="age" value="20">
-                    <label for="age1">< 21</label><br>
-                    <input type="radio" id="age2" name="age" value="50">
-                    <label for="age2">21 - 50</label><br>
-                    <input type="radio" id="age3" name="age" value="51">
-                    <label for="age3">> 51</label><br>
+                <div id="radio-button">
+                    <input type="radio" id="age1" name="age" value="Less than 21">
+                    <label for="age1">Less than 21</label><br>
+                    <input type="radio" id="age2" name="age" value="Between 21 and 50">
+                    <label for="age2">Between 21 and 50</label><br>
+                    <input type="radio" id="age3" name="age" value="Older than 50">
+                    <label for="age3">Older than 50</label><br>
                 </div>
                 <br>
-                <div>
+                <div id="check-box">
                     <input type="checkbox" id="browser1" name="browsers" value="Firefox">
                     <label for="browser1">Firefox</label>
                     <input type="checkbox" id="browser2" name="browsers" value="Edge">
@@ -37,20 +39,21 @@
                 </div>
                 <br>
                 <div>
-                    <label for="movieTypes">Select which type of movie you prefer:</label>
-                    <select id="movieTypes" required>
-                        <option> -- select an option -- </option>
-                        <option value="Action">Action</option>
-                        <option value="Comedy">Comedy</option>
-                        <option value="Drama">Drama</option>
-                        <option value="Documentary">Documentary</option>
-                        <option value="Science Fiction">Science Fiction</option>
+                    <label for="movie-types">Select which type of movie you prefer:</label>
+                    <select id="movie-types" required>
+                        <option value="None" selected disabled hidden> -- select an option -- </option>
+                        <option label="Action" value="Action" name="movie">Action</option>
+                        <option label="Comedy" value="Comedy" name="movie">Comedy</option>
+                        <option label="Drama" value="Drama" name="movie">Drama</option>
+                        <option label="Documentary" value="Documentary" name="movie">Documentary</option>
+                        <option labe="Science Fiction" value="Science Fiction" name="movie">Science Fiction</option>
                     </select>
                 </div>
                 <div>
-                    
+                    <input type="button" onclick="run()" value="Submit">
                 </div>
             </form>
         </div>
+        <textarea readonly class="result-box" id="result" name="result" placeholder=Result></textarea><br>
     </body>
 </html>

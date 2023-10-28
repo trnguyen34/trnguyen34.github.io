@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>States 2019 Census</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Data bout serveral of US states from the july 2019 census.">
+        <script src="js/hw5.js"></script>
+    </head>
+    <body>
+        <a class="back-homework2" href="hw5.html">BACK HOMEWORK 5</a>
+        <h2>US States Census Data</h2>
+
+        <div>
+            <form id="state-form" name="state-form">
+                <label for="state">Enter a state: </label><br>
+                <input type="text" id="state" name="state" placeholder="Full Name or Abbreviation">
+                <input type="button" id="state-button" value="submit" onClick="getStateResult();">
+            </form>
+
+            <br>
+            <label for="result">State Data:</label><br>
+            <textarea readonly class="result-box" id="result" name="result" placeholder="State Result"></textarea><br>
+        </div>
+    </body>
+</html>

@@ -1,4 +1,12 @@
 var errorArray = [];
+var statesData = [
+    ["AL", "Alabama", "Montgomery", "4,903,185"],
+    ["AK", "Alaska", "Juneau", "731,545"],
+    ["AZ", "Arizona", "Phoenix", "7,278,717"],
+    ["AR", "Arkansas", "Little Rock", "3,017,825"],
+    ["CA", "California", "Sacramento", "39,512,223"],
+    ["CO", "Colorado", "Denver", "5,758,736"]
+];
 
 function run() {
     var name = getUserFullName();
@@ -95,4 +103,33 @@ function listenOnChnage() {
 function listenOnclick() {
     var destination = document.getElementById("destination-onclick").value;
     window.open(destination);
+}
+
+function getStateResult() {
+    var state = document.forms["state-form"].elements["state"].value.toLocaleLowerCase();
+
+    if (state.length === 0) {
+        document.getElementById('result').value = "Please enter a state."
+    } else {
+        var result = searchState(state);
+        
+    }
+}
+
+function searchState(name) {
+    var result = [];
+
+    for (var i =0; i < statesData.length; i++) {
+        var state = statesData[i];
+        var abbrStateName = state[0].toLocaleLowerCase();
+        var fullStateName = state[1].toLocaleLowerCase();
+
+        if ((name.localeCompare(abbrStateName) === 0) || 
+            (name.localeCompare(fullStateName) === 0)) {
+            result = state;
+            return result;
+        }
+    }
+
+    return result
 }
