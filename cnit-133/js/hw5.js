@@ -112,7 +112,16 @@ function getStateResult() {
         document.getElementById('result').value = "Please enter a state."
     } else {
         var result = searchState(state);
-        
+        if (result.length === 0) {
+            document.getElementById('result').value = "Sorry, we do not have information about this state! " + 
+                                                        "We only have information about Alabama, Alaska, " + 
+                                                        "Arizona, Arkansas, California, and Colorado"; 
+        } else {
+            var messageResult = "Thanks for your inquiry, here is the information you requested:\nState abbr = " + 
+                                result[0] + "\nState name = " + result[1] + "\nCapital = " + result[2] + 
+                                "\nPopulation = " + result[3];
+            document.getElementById('result').value = messageResult;
+        }
     }
 }
 
