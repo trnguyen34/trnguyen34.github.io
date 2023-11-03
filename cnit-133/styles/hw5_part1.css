@@ -44,17 +44,22 @@ h1, label {
     height: 30px;
 }
 
-.result-box {
-    width: 269.7px;
-    height: 87px;
+.input-box {
+    width: 98%;
 }
 
-.buttons-div {
-    display: flex;
-    flex-direction: column;
+.result-box {
+    width: 98%;
+    height: 5.5rem;
 }
 
 .back-homework2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: Arial;
     color: white;
     background-color: black;
     margin-bottom: 5px;
@@ -73,14 +78,6 @@ h1, label {
     background-color: rgb(119, 118, 118);
 }
 
-.back-homework2 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1rem;
-    font-family: Arial;
-}
 
 
 
