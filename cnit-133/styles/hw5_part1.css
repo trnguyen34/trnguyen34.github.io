@@ -53,6 +53,11 @@ h1, label {
     height: 5.5rem;
 }
 
+.result-box-part3 {
+    width: 35rem;
+    height: 7rem;
+}
+
 .back-homework2 {
     display: flex;
     justify-content: center;
