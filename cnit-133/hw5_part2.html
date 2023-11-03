@@ -7,35 +7,33 @@
         <script src="js/hw5.js"></script>
     </head>
     <body>
-        <br>
-        <div>
-            <h2>Navigate</h2>
-        </div>
-        <div>
-            <form>
-                <label for="destination-onchange">Choose a website (onChange):</label><br>
-                <select id="destination-onchange" onChange="listenOnChnage();">
-                    <option selected disabled hidden> -- select a website -- </option>
-                    <option value="https://www.google.com/">Google</option>
-                    <option value="https://www.youtube.com/">YouTube</option>
-                    <option value="https://www.facebook.com">Facebook</option>
-                </select>
-            </form>
+        <div class="box-content">
+            <main>
+                <div class="heading">
+                    <h1>Navigate</h1>
+                </div>
+                <form>
+                    <label for="destination-onchange">Choose a website (onChange):</label><br>
+                    <select id="destination-onchange" onChange="listenOnChnage();">
+                        <option selected disabled hidden> -- select a website -- </option>
+                        <option value="https://www.google.com/">Google</option>
+                        <option value="https://www.youtube.com/">YouTube</option>
+                        <option value="https://www.facebook.com">Facebook</option>
+                    </select>
+                </form>
 
-            <br>
-
-            <form>
-                <label for="destination-onclick">Choose a website (onClick):</label><br>
-                <select id="destination-onclick">
-                    <option selected disabled hidden> -- select a website -- </option>
-                    <option value="https://www.google.com/">Google</option>
-                    <option value="https://www.youtube.com/">YouTube</option>
-                    <option value="https://www.facebook.com">Facebook</option>
-                </select>
-                <input class="back-homework2" type="button" value="Go" onClick="listenOnclick();">
-            </form>
+                <form>
+                    <label for="destination-onclick">Choose a website (onClick):</label><br>
+                    <select id="destination-onclick">
+                        <option selected disabled hidden> -- select a website -- </option>
+                        <option value="https://www.google.com/">Google</option>
+                        <option value="https://www.youtube.com/">YouTube</option>
+                        <option value="https://www.facebook.com">Facebook</option>
+                    </select>
+                    <input class="back-homework2" type="button" value="Go" onClick="listenOnclick();">
+                </form>
+            </main>
+            <a class="back-homework2" href="hw5.html">BACK HOMEWORK 5</a>
         </div>
-        <a class="back-homework2" href="hw5.html">BACK HOMEWORK 5</a>
     </body>
 </html>
-
