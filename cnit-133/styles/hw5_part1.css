@@ -54,7 +54,7 @@ h1, label {
     flex-direction: column;
 }
 
-.input-button, .back-homework2 {
+.back-homework2 {
     color: white;
     background-color: black;
     margin-bottom: 5px;
@@ -65,18 +65,20 @@ h1, label {
     cursor: pointer;
 }
 
-.input-button:hover, .back-homework2:hover {
+.back-homework2:hover {
     background-color: rgb(57, 57, 57);
 }
 
-.input-button:active, .back-homework2:hover:active {
+.back-homework2:hover:active {
     background-color: rgb(119, 118, 118);
 }
 
 .back-homework2 {
+    display: flex;
+    justify-content: center;
     text-align: center;
     text-decoration: none;
-    font-size: 13.3333px;
+    font-size: 1rem;
     font-family: Arial;
 }
 
