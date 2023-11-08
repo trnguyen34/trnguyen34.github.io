@@ -1,5 +1,5 @@
 function run() {
-    var value =  document.forms["my-form"].elements["number"].value;
+    var value = document.forms["my-form"].elements["number"].value;
     
     if (validateInput(value)) {
         var value = parseFloat(value);
@@ -28,5 +28,16 @@ function numberofDecimals(value) {
     return false;
 }
 
+function getNumberOfMatches() {
+    var content = document.forms["search-form"].elements["content"].value;
+    var char = document.forms["search-form"].elements["letter"].value;
+    
+    document.getElementById('result').value = char;
+}
 
+function search(content, char) {
+    var numberOfMatches = 0;
+    
 
+    return numberOfMatches;
+}

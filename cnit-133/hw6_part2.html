@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search a Character Letter</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Square a number and round a number with four decimlas to the nearest integer, 10th, 100th, and 1000th postions.">
+        <link rel="stylesheet" href="styles/hw5_part1.css">
+        <script src="js/hw6.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="box-content">
+                <main>
+                    <div class="heading">
+                        <h1>Search a Character Letter</h1>
+                    </div>
+                    <form class="survey-form" name="form" id="search-form">
+                        <div>
+                            <label for="content">Enter A Long Content:</label>
+                            <textarea class="result-box" id="content" name="result" placeholder="Enter a content"></textarea><br>
+                        </div>
+                        <div>
+                            <label for="letter">Enter a letter:</label><br>
+                            <input class="input-box" maxlength="1" type="text" id="letter" placeholder="Enter a letter" name="letter" required>
+                        </div>
+                        <br>
+
+                        <div>
+                            <label for="result">Result:</label>
+                            <textarea readonly class="result-box" id="result" name="result" placeholder=Result></textarea><br>
+                        </div>
+
+                        <input class="back-homework2" type="button" onclick="getNumberOfMatches()" value="SUBMIT">
+                        <input class="back-homework2" type="reset" id="clear-button" value="CLEAR">
+                    </form>
+                    <a class="back-homework2" href="hw6.html">BACK HOMEWORK 6</a>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
