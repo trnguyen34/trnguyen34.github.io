@@ -1,3 +1,5 @@
+var errors = [];
+
 function run() {
     var value = document.forms["my-form"].elements["number"].value;
     
@@ -30,14 +32,64 @@ function numberofDecimals(value) {
 
 function getNumberOfMatches() {
     var content = document.forms["search-form"].elements["content"].value;
-    var char = document.forms["search-form"].elements["letter"].value;
+    var char = document.forms["search-form"].elements["letter"].value.trim();
+    validateUserInput(content, char);
+
+    if (errors.length > 0) {
+        document.getElementById('result').value = errors.join("\n");
+        errors = [];
+    } else {
+        var result = search(content, char);   
     
-    document.getElementById('result').value = char;
+        if (result === 0) {
+            newWindow(char);
+            document.getElementById('result').value = "";
+        } else {
+            document.getElementById('result').value = "Character '" + char + 
+                                            "' shows up in the content " + 
+                                            result + " time(s)";
+        }
+    }
+}
+
+function validateUserInput(content, char) {
+    if (content.length === 0) {
+        errors.push("Please enter a content!");
+    }
+
+    if (char.length === 0) {
+        errors.push("Please enter a letter!");
+    }
+}
+
+function newWindow(char) {
+    var myText = "<!DOCTYPE html>\n";
+    myText += "<html lang='en'>\n";
+    myText += "<head>\n";
+    myText += "<title>Not Found</title>\n";
+    myText += "</head>\n";
+    myText += "<body>\n";
+    myText += "<div style='margin:0 auto;'>\n";
+    myText += "<p><strong>Search character '" + char + "' not found in the content you typed!</strong></p>\n";
+    myText += "<input type='button' value='Close' onclick='window.close()'>\n";
+    myText += "</div>\n";
+    myText += "</body>\n";
+    myText += "</html>";
+
+    var myWindow = window.open("", "new_window","top=100,left=1,width=300,height=100");
+    myWindow.opener = null;
+    myWindow.focus();
+    myWindow.document.write(myText);
+    myWindow.document.close();
 }
 
 function search(content, char) {
     var numberOfMatches = 0;
-    
+    for (var i = 0; i < content.length; i++) {
+        if (content[i].toLowerCase() === char.toLowerCase()) {
+            numberOfMatches += 1;
+        }
+    }
 
     return numberOfMatches;
 }
