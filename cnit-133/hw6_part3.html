@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search a Character Letter</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Square a number and round a number with four decimlas to the nearest integer, 10th, 100th, and 1000th postions.">
+        <link rel="stylesheet" href="styles/hw5_part1.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+        <script src="js/hw6.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="box-content">
+                <main>
+                    <div class="heading">
+                        <h1>Search a Character Letter</h1>
+                    </div>
+                    <form class="phone-number-form" name="phone-number-form" id="phone-number-form">
+                        <div>
+                            <label for="phone-number">Enter Your Phone Number:</label><br>
+                            <input class="input-box" type="text" id="phone-number" name="phone-number" placeholder="Enter your phone number"maxlength=10 required>
+                            <p id="error-message"></p>
+                        </div>
+                        <div>
+                            <label>Phone Number You Entered:</label><br>
+                            <input class="arena-code" name="arena-code" id="arena-code" readonly>
+                            <input class="first-three-digits" name="first-three-digits" id="first-three-digits" readonly> 
+                            <input class="last-four-digits" name="last-four-digits" id="last-four-digits" readonly>
+                        </div>
+
+                        <input class="back-homework2" type="button" onclick="phoneNumber()" value="SUBMIT">
+                        <input class="back-homework2" type="reset" id="clear-button" value="CLEAR">
+                    </form>
+                    <a class="back-homework2" href="hw6.html">BACK HOMEWORK 6</a>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
+
+<script type="text/javascript">
+    $('input[name="phone-number"]').mask('(000) 000-0000');
+</script>

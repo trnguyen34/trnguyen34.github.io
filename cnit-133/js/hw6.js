@@ -93,3 +93,54 @@ function search(content, char) {
 
     return numberOfMatches;
 }
+
+
+function phoneNumber() {
+    var phoneNumber = document.forms["phone-number-form"].elements["phone-number"].value;
+    phoneNumber = phoneNumber.replace("(", "");
+    phoneNumber = phoneNumber.replace(")", "");
+    phoneNumber = phoneNumber.replace("-", "");
+
+    if (validatePhoneNumberLength(phoneNumber)) {
+        document.getElementById('arena-code').value = phoneNumber.length;
+        document.getElementById('error-message').innerHTML = "";
+        splitPhoneNumber(phoneNumber)
+    } else {
+        document.getElementById('error-message').innerHTML = "Phone number must have 10 digits"
+    }
+}
+
+function validatePhoneNumberLength(phoneNumber) {
+    var phoneNumberRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    if (phoneNumberRegex.test(phoneNumber)) {
+        return true;
+    }
+
+    return false;
+}
+
+
+function splitPhoneNumber(phoneNumber) {
+    phoneNumber = phoneNumber.split(" ");
+    var arenaCode = phoneNumber[0];
+    var firstThreeDigits = phoneNumber[1].slice(0, 3);
+    var firstFourDigits = phoneNumber[1].slice(3);
+    document.getElementById('arena-code').value = arenaCode;
+    document.getElementById('first-three-digits').value = firstThreeDigits;
+    document.getElementById('last-four-digits').value = firstFourDigits;
+}
+
+function removePhoneNumberExtraCharacters(phoneNumber) {
+    phoneNumber = phoneNumber.replace("(", "");
+    phoneNumber = phoneNumber.replace(")", "");
+    phoneNumber = phoneNumber.replace("-", "");
+    phoneNumber = phoneNumber.replaceAll(" ", "")
+    return phoneNumber;
+}
+
+
+
+
+
+
+
