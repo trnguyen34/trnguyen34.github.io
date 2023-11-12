@@ -104,7 +104,7 @@ function phoneNumber() {
     if (validatePhoneNumberLength(phoneNumber)) {
         document.getElementById('arena-code').value = phoneNumber.length;
         document.getElementById('error-message').innerHTML = "";
-        splitPhoneNumber(phoneNumber)
+        slicePhoneNumber(phoneNumber);
     } else {
         document.getElementById('error-message').innerHTML = "Phone number must have 10 digits"
     }
@@ -120,22 +120,13 @@ function validatePhoneNumberLength(phoneNumber) {
 }
 
 
-function splitPhoneNumber(phoneNumber) {
-    phoneNumber = phoneNumber.split(" ");
-    var arenaCode = phoneNumber[0];
-    var firstThreeDigits = phoneNumber[1].slice(0, 3);
-    var firstFourDigits = phoneNumber[1].slice(3);
+function slicePhoneNumber(phoneNumber) {
+    var arenaCode = phoneNumber.slice(0, 3);
+    var firstThreeDigits = phoneNumber.slice(4, 7);
+    var firstFourDigits = phoneNumber.slice(7);
     document.getElementById('arena-code').value = arenaCode;
     document.getElementById('first-three-digits').value = firstThreeDigits;
     document.getElementById('last-four-digits').value = firstFourDigits;
-}
-
-function removePhoneNumberExtraCharacters(phoneNumber) {
-    phoneNumber = phoneNumber.replace("(", "");
-    phoneNumber = phoneNumber.replace(")", "");
-    phoneNumber = phoneNumber.replace("-", "");
-    phoneNumber = phoneNumber.replaceAll(" ", "")
-    return phoneNumber;
 }
 
 
