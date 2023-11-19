@@ -83,6 +83,8 @@ h1, label {
     background-color: rgb(119, 118, 118);
 }
 
-
+.error-message {
+    color: red;
+}
 
 
