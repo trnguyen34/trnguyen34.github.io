@@ -129,6 +129,10 @@ function slicePhoneNumber(phoneNumber) {
     document.getElementById('last-four-digits').value = firstFourDigits;
 }
 
+function clearError() {
+    document.getElementById('error-message').innerHTML = "";
+}
+
 
 
 
