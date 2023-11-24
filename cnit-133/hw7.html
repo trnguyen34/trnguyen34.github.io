@@ -3,14 +3,84 @@
     <head>
         <title>Homework 7</title>
         <meta charset="utf-8">
-        <meta name="description" content="Homework 7">
+        <meta name="description" content="Homework 7: Homepage">
+        <link rel="stylesheet" href="styles/hw2.css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style>
+            h2, h3{
+                cursor: pointer;
+                color: white;
+            }
+            
+
+            p {
+                color: blue;
+            }
+
+            h3 {
+                position: relative;
+            }
+              
+              h3::before {
+                  content: '';
+                  position: absolute;
+                  width: 100%;
+                  height: 4px;
+                  border-radius: 4px;
+                  background-color: white;
+                  bottom: 0;
+                  left: 0;
+                  transform-origin: right;
+                  transform: scaleX(0);
+                  transition: transform .3s ease-in-out;
+                }
+              
+              h3:hover::before {
+                transform-origin: left;
+                transform: scaleX(1);
+              }
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.answer').hide();
+                $('.container .main-contents .parts h2').click(function() { $(this).next('.answer').toggle()
+                if($('.answer:visible').length == 0) {
+                    $(this).removeClass('close')
+                } else {
+                    $(this).addClass('close')
+                };
+                });
+            });
+        </script>
     </head>
     <body>
-        <a href="hw1.html">Back Home</a>
-        <main class="content">
+        <div class="container">
             <header class="title-page">
-                <h2>Homework 7</h2>
+                <h1>CNIT 133 Homework 7 - Object Model and Event Model</h1>
             </header>
-        </main>
+            <main class="main-contents">
+                <div class="parts">
+                    <div class="container">
+                        <h2>Part 1</h2>
+                        <div class="answer" style="display: none;">
+                            <a href="hw7_part1.html">
+                                <h3>Customize your own web page.</h3>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <h2>Part 2</h2>
+                        <div class="answer" style="display: none;">
+                            <h3>Navigave to different homework pages.</h3>
+                        </div>
+                    </div>
+                </div>
+                <a href="hw1.html">
+                    <div class="part">
+                        <p>Back Home</p>
+                    </div>
+                </a>
+            </main>
+        </div>
     </body>
 </html>
