@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Styles</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Customize your own web page.">
+        <link rel="stylesheet" href="styles/hw5_part1.css">
+        <style>
+            .box-content {
+                max-width: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="box-content">
+                <main>
+                    <div class="heading">
+                        <h1>Styles</h1>
+                    </div>
+                    <div>
+                        <p class="styles-content">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                    <form class="survey-form" name="form" id="my-form">
+                        <div class="radio">
+                            <label>Select a color for the text background:</label><br>
+                            <input type="radio" id="white" name="color" value="white">
+                            <label for="white">White</label><br>
+                            <input type="radio" id="red" name="color" value="red">
+                            <label for="red">Red</label><br>
+                            <input type="radio" id="blue" name="color" value="blue">
+                            <label for="blue">Red</label><br>
+                        </div>
+                        <br>
+                        <div class="checkboxes">
+                            <label>Select the following text style:</label><br>
+                            <input type="checkbox" id="underline" name="text-style" value="underline">
+                            <label for="underline">Underline</label>
+                            <input type="checkbox" id="bold" name="text-style" value="bold">
+                            <label for="bold">Bold</label>
+                            <input type="checkbox" id="italic" name="text-style" value="italic">
+                            <label for="italic">Italic</label>
+                        </div>
+                        <br>
+                        <div>
+                            <label for="font-sizes">Select a font size:</label><br>
+                            <select id="font-sizes" required>
+                                <option label="12" value="12" name="size">12</option>
+                                <option label="16" value="16" name="size">16</option>
+                                <option label="20" value="20" name="size">20</option>
+                                <option label="24" value="24" name="size">24</option>
+                            </select>
+                        </div>
+                        <br>
+                        <input class="back-homework2" type="button" onclick="run()" value="SUBMIT">
+                    </form>
+                    <a class="back-homework2" href="hw6.html">BACK HOMEWORK 6</a>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
