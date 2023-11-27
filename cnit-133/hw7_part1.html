@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <meta name="description" content="Customize your own web page.">
         <link rel="stylesheet" href="styles/hw5_part1.css">
+        <script src="js/hw7.js"></script>
         <style>
             .box-content {
                 max-width: 50%;
@@ -19,7 +20,7 @@
                         <h1>Styles</h1>
                     </div>
                     <div>
-                        <p class="styles-content">
+                        <p class="styles-content" id="styles-content">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
@@ -27,7 +28,7 @@
                         </p>
                     </div>
                     <form class="survey-form" name="form" id="my-form">
-                        <div class="radio">
+                        <div id="radio">
                             <label>Select a color for the text background:</label><br>
                             <input type="radio" id="white" name="color" value="white" checked>
                             <label for="white">White</label><br>
@@ -37,7 +38,7 @@
                             <label for="blue">blue</label><br>
                         </div>
                         <br>
-                        <div class="checkboxes">
+                        <div id="checkboxes">
                             <label>Select the following text style:</label><br>
                             <input type="checkbox" id="underline" name="text-style" value="underline">
                             <label for="underline">Underline</label>
