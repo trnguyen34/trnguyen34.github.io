@@ -1,6 +1,37 @@
 function run() {
-    document.getElementById("styles-content").style.background = getRadioValue();
+    getRadioValue();
+    appliedTextStyles();
+    getDropdownDataFontSize();
+}
 
+function getRadioValue() {
+    var value = "";
+    var select = document.getElementById("radio");
+    var input = select.getElementsByTagName("input");
+
+    for (var i = 0; i < input.length; i++) {
+        if (input[i].type === "radio" && input[i].checked) {
+            value = input[i].value;
+            break;
+        }
+    }
+    document.getElementById("styles-content").style.background = value;
+}
+
+function getCheckBoxValues() {
+    var values = [];
+    var select = document.getElementById("checkboxes");
+    var input = select.getElementsByTagName("input");
+
+    for (var i = 0; i < input.length; i++) {
+        if(input[i].type === "checkbox" && input[i].checked) {
+            values.push(input[i].value);
+        }
+    }
+    return values;
+}
+
+function appliedTextStyles() {
     var checkboxValues = getCheckBoxValues();
 
     if (checkboxValues.includes("underline")) {
@@ -22,30 +53,8 @@ function run() {
     }
 }
 
-function getRadioValue() {
-    var value = "";
-    var select = document.getElementById("radio");
-    var input = select.getElementsByTagName("input");
-
-    for (var i = 0; i < input.length; i++) {
-        if (input[i].type === "radio" && input[i].checked) {
-            value = input[i].value;
-            break;
-        }
-    }
-
-    return value;
-}
-
-function getCheckBoxValues() {
-    var values = [];
-    var select = document.getElementById("checkboxes");
-    var input = select.getElementsByTagName("input");
-
-    for (var i = 0; i < input.length; i++) {
-        if(input[i].type === "checkbox" && input[i].checked) {
-            values.push(input[i].value);
-        }
-    }
-    return values;
+function getDropdownDataFontSize() {
+    var select = document.getElementById("font-sizes");
+    var value = select.value;
+    document.getElementById("styles-content").style.fontSize = value;
 }
