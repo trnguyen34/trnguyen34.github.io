@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Navigate</title>
+        <meta charset="utf-8">
+        <meta name="description" content="Navigate to different of homework pages.">
+        <link rel="stylesheet" href="styles/hw5_part1.css">
+        <script src="js/hw7.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('nav li ul').hide().removeClass('fallback');
+                $('nav li').hover(
+                  function () {
+                    $('ul', this).stop().slideDown(200);
+                  },
+                  function () {
+                    $('ul', this).stop().slideUp(200);
+                  }
+                );
+            }); 
+        </script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="box-content">
+                <main>
+                    <div class="heading">
+                        <h1>Navigate</h1>
+                    </div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#">Homeowrk 2</a>
+                                <ul class style="display: none;">
+                                    <li>
+                                        <a href="hw2_part1.html">Part 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Part 2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a class="back-homework2" href="hw7.html">BACK HOMEWORK 7</a>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>
