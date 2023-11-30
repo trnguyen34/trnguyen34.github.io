@@ -11,15 +11,32 @@
             $(document).ready(function(){
                 $('nav li ul').hide().removeClass('fallback');
                 $('nav li').hover(
-                  function () {
-                    $('ul', this).stop().slideDown(200);
-                  },
-                  function () {
-                    $('ul', this).stop().slideUp(200);
-                  }
+                    function () {
+                        $('ul', this).stop().slideDown(300);
+                    },
+                    function () {
+                        $('ul', this).stop().slideUp(300);
+                    }
                 );
             }); 
         </script>
+        <style>
+            .homework-dropdown {
+                display: inline-block;
+            }
+            ul {
+                list-style-type: none;
+                padding-right: 0.5rem;
+                padding-left: 0.5rem;
+            }
+            .dropdown-secton {
+                display: flex;
+                justify-content: space-between;
+            }
+            .parts-listing {
+                
+            }
+        </style>
     </head>
     <body>
         <div class="content">
@@ -28,21 +45,59 @@
                     <div class="heading">
                         <h1>Navigate</h1>
                     </div>
-                    <nav>
-                        <ul>
-                            <li>
-                                <a href="#">Homeowrk 2</a>
-                                <ul class style="display: none;">
+                    <div class="dropdown-secton">
+                        <div class="homework-dropdown">
+                            <nav>
+                                <ul style="padding-left: 0rem;">
                                     <li>
-                                        <a href="hw2_part1.html">Part 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="hw2_part2.html">Part 2</a>
+                                        <button class="back-homework2">Homework 2</button>
+                                        <ul class="parts-listing" style="display: none;">
+                                            <li>
+                                                <a class="back-homework2" href="hw2_part1.html">Part 1</a>
+                                            </li>
+                                            <li>
+                                                <a class="back-homework2" href="hw2_part2.html">Part 2</a>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </nav>
+                            </nav>
+                        </div>
+                        <div class="homework-dropdown"> 
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <button class="back-homework2">Homework 3</button>
+                                        <ul class="parts-listing" style="display: none;">
+                                            <li>
+                                                <a class="back-homework2" href="hw3_part1.html">Part 1</a>
+                                            </li>
+                                            <li>
+                                                <a class="back-homework2" href="hw3_part2.html">Part 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="homework-dropdown">
+                            <nav>
+                                <ul style="padding-right: 0rem;">
+                                    <li class="homework-list">
+                                        <button class="back-homework2">Homework 4</button>
+                                        <ul class="parts-listing" style="display: none;">
+                                            <li>
+                                                <a class="back-homework2" href="hw4_part1.html">Part 1</a>
+                                            </li>
+                                            <li>
+                                                <a class="back-homework2" href="hw4_part2.html">Part 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
                     <a class="back-homework2" href="hw7.html">BACK HOMEWORK 7</a>
                 </main>
             </div>
