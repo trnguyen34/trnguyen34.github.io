@@ -64,4 +64,12 @@
     <PRICE>8.20</PRICE>
     <YEAR>1987</YEAR>
   </CD>
+  <CD>
+    <TITLE>The Road to Somewhere</TITLE>
+    <ARTIST>Truong Nguyen</ARTIST>
+    <COUNTRY>USA</COUNTRY>
+    <COMPANY>TSM</COMPANY>
+    <PRICE>7.00</PRICE>
+    <YEAR>2023</YEAR>
+  </CD>
 </CATALOG>
