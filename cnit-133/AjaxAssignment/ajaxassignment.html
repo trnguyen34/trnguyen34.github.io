@@ -62,16 +62,22 @@
             <h2>REST API</h2>
             <h3>GoodsForYou E-commerce Website</h3>
             <p>
-                GoodsForYou is a new E-commerce company that just spent more than 90 percent of their budget on developing
-                the website. Due to the lack of fund left, we cannot not afford to hire a team of developers to build a secure
-                pay system. Therefore, I recommend we should use the Unified Checkout Solutions API from Mastercard. This API does 
-                not just suport Mastercard but it also supports Visa, American Express, and Discover cards. Additionally, the API
-                is free to use. 
-                <br>
-                <br>
-                The Unified Checkout Solutions API uses the OAuth1.0. The OAuth1.0 needs to be included in the header in order to 
-                authenticate API calls and identifies the client application. For senstive payment data, it will be using JSON Web 
-                Encryption (JWE).
+                GoodsForYou, a new E-commerce company, has spent over 90 percent of its budget to develop its website.
+                Given the limited remaining funds, hiring a team to build a secure payment system is financially impractical.
+                To address this, I propose leveraging the 
+                <a href="https://developer.mastercard.com/unified-checkout-solutions/documentation">Unified Checkout Solutions</a>
+                from Mastercard. This API not only supports Mastercard but also accommodates Visa, American Express, and Discover
+                Cards. Futhermore, the API is free to use, presenting a cost-effective solution for our payment system.
+            </p>
+            <p>
+                The Unified Checkout Solutions API utilizes OAuth 1.0 to generate a 2048-bit private RSA key for both the Signing
+                Key, used to authenticate API calls, and the Cosumer Key, which identifies the client application. To ensure the
+                security of sensitive payment data during transport, the API employs JSON Web Encryption (JWE), which encrypt 
+                a JSON file.
+            </p>
+            <p>
+                Using the Unified Checkout Solutions API will not only presents a cost-eddective solution but also save us 
+                resources, which can be allocate to something else. 
             </p>
         </div>
         <a class="back-homework2" href="../hw1.html">Main Page</a>
