@@ -11,11 +11,19 @@ in Computer Science from the University of California, Santa Cruz. I’m passion
 about building scalable systems and exploring systems programming
 
 ## EDUCATION
-**Computer Science**
-University of California, Santa Cruz
+University of California, Santa Cruz - **Computer Science**
 
 ## Projects
 
 ### Custom 16-bit Game Emulator
 **Tech:** C++, System Programming
-Designed and implemented a cycle-accurate 16-bit CPU emulator with memory mapping and instruction decoding.  
+Designed and implemented a cycle-accurate 16-bit CPU emulator with memory mapping and instruction decoding.
+
+## Skills
+
+**Programming Languages:** 
+<span class="iconify" data-icon="vscode-icons:file-type-python"></span> Python, 
+<span class="iconify" data-icon="vscode-icons:file-type-c"></span> C, 
+<span class="iconify" data-icon="vscode-icons:file-type-cpp"></span> C++
+
+**Tools and Frameworks:** Git, Flask, RESTful APIs, Docker
