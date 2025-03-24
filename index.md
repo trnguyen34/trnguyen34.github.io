@@ -6,7 +6,13 @@ layout: single
 author_profile: true
 ---
 
-I am a **software engineer** based in San Francisco. I recently graduated with a degree in Computer Science from the University of California, Santa Cruz. I’m passionate about building scalable systems and exploring systems programming
+I am a **software engineer** based in San Francisco. I recently graduated with a degree 
+in Computer Science from the University of California, Santa Cruz. I’m passionate 
+about building scalable systems and exploring systems programming
+
+## EDUCATION
+**Computer Science**
+University of California, Santa Cruz
 
 ## Projects
 
