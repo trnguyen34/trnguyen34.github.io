@@ -44,4 +44,9 @@ University of California, Santa Cruz - **Computer Science**
 
 ## Skills & EXPERTISE
 
-Python | C/C+ | SQL | Flask | Docker | RESTful APIs | Parallel and Concurrent Programming
+- Python
+- C/C+
+- SQL
+- Flask
+- RESTful APIs
+- Parallel and Concurrent Programming
