@@ -14,7 +14,6 @@ about building scalable systems and exploring systems programming
 University of California, Santa Cruz - **Computer Science**
 
 ## Projects
-
 ### Custom 16-bit Game Emulator
 **Tech:** C++, System Programming
 - Designed and implemented a cycle-accurate 16-bit CPU emulator with memory mapping and instruction decoding.
@@ -42,8 +41,7 @@ University of California, Santa Cruz - **Computer Science**
 - Built a custom HTTP request parser to handle and validate client requests, ensuring proper decoding of HTTP methods, header, and payloads.
 - Improve the server throughput by processing multiple clients requests simultaneously by assigning a thread to each task.
 
-## Skills & EXPERTISE
-
+## SKILLS & EXPERTISE
 - Python
 - C/C+
 - SQL
